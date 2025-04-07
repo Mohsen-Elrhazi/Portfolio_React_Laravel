@@ -21,7 +21,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="flex  shadow-2xl">
+    // <div className="flex  shadow-2xl mt-20 bg-white">
       <div className="container mx-auto">
         <div className="max-w-2xl mx-auto my-10 bg-white p-4 rounded-md shadow-xl">
           <div className="text-center">
@@ -148,6 +148,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-    </div>
+    // </div>
   );
 }
