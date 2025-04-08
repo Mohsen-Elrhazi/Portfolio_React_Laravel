@@ -1,19 +1,17 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import Footer from "../components/footer";
 
 export default function Layout() {
   return (
     <>
-      <header>
-        {/* <h1>header de app</h1> */}
+      <header className="mb-12">
         <Navbar />
       </header>
-      <main>
+      <main className="min-h-screen mt-24 ">
         <Outlet />
       </main>
-      <footer>
-        <h1>footer de app</h1>
-      </footer>
+      <Footer/>
     </>
   );
 }

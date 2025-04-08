@@ -3,7 +3,7 @@ import "../assets/styles/Navbar.css";
 
 export default function Navbar() {
   return (
-    <header>
+    // <header>
         <nav className="navbar">
             <h1>Portfolio</h1>
             <ul> 
@@ -15,6 +15,6 @@ export default function Navbar() {
         
             <button className="">btn</button>
         </nav>
-    </header>
+    // </header>
   );
 }
