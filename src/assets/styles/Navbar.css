@@ -1,6 +1,6 @@
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 1rem 2rem;
     /* position:fixed;
@@ -11,7 +11,7 @@
     /* z-index: 1000; */
     transition: background 0.3s ease;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-bottom: 2px solid rgba(56, 54, 54, 0.1);
+    /* border-bottom: 2px solid rgba(56, 54, 54, 0.1); */
     /* backdrop-filter: blur(10px); */
 
 
@@ -39,10 +39,11 @@
     position: relative;
     padding:8px 10px;
     transition: all 0.3s ease;
+    
   }
  
   
-  .navbar a::after {
+  /* .navbar a::after {
     content: " ";
     position: absolute;
     width: 0px;
@@ -51,22 +52,30 @@
     bottom: -6px;
     left: 50%;
     transition: width .2s ease, left .2s ease;
-}
+} */
 
-.navbar li:hover a::after {
+/* .navbar a.active::after {
     width: 100%;
     left: 0;
+} */
+
+/* .navbar li:hover a::after {
+    width: 100%;
+    left: 0;
+} */
+
+.navbar li:hover  {
+color:#e2270a
 }
 
 .navbar a.active {
     color: #e2270a;
+    border:1px solid #e2270a;
+    border-radius: 20px;
 }
 
-.navbar a.active::after {
-    width: 100%;
-    left: 0;
-    background-color: #e3390e;
-}
+
+
   
   .navbar button {
     border: 1.4px solid #e3390e;

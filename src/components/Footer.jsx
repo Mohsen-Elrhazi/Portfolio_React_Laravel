@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-// import Github from '../assets/images/github.png';
 import Github2 from '../assets/images/github2.png';
 import LinkedIn2 from '../assets/images/linkedin2.png';
 import Facebook2 from '../assets/images/facebook2.png';
@@ -15,13 +14,13 @@ export default function Footer() {
           <p className="text-gray-800">&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
         </div>
         <div className="flex justify-between items-center space-x-16">
-          <Link to="#" className="hover:scale-110 transition-transform duration-300">
-            <img className="w-7" src={LinkedIn2} alt="linkedin"></img>
+          <Link to="#" className="hover:scale-110 transition-transform duration-300 ">
+            <img className="w-7" src={LinkedIn2} alt="linkedin"  style={{ filter: 'drop-shadow(0px 0px 12px #e2270a)' }}></img>
           </Link>
           <Link to="#" className="hover:scale-110 transition-transform duration-300">
             <img className="w-7" src={Github2} alt="github"></img>
           </Link>
-          <Link to="#" className="hover:scale-110 transition-transform duration-300">
+          <Link to="#" className="hover:scale-110  transition-transform duration-300">
             <img className="w-7" src={Facebook2} alt="facebook"></img>
           </Link>
         </div>
