@@ -5,10 +5,10 @@ import Footer from "../components/footer";
 export default function Layout() {
   return (
     <>
-      <header className="mb-12">
+      <header className="">
         <Navbar />
       </header>
-      <main className="min-h-screen mt-24 ">
+      <main className="h-auto my-8 ">
         <Outlet />
       </main>
       <Footer/>

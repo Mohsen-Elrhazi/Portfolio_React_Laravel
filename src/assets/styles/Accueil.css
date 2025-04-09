@@ -1,0 +1,205 @@
+/* PortfolioMain.css - Version avec couleurs attractives et masculines */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Styles principaux */
+.portfolio-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  gap: 40px;
+}
+
+/* Styles de l'image */
+.image-container {
+  flex: 1;
+  max-width: 380px;
+  position: relative;
+}
+
+.profile-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+/* Effet de halo autour de l'image */
+.image-container::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: linear-gradient(45deg, #ff7e00, #f5b304);
+  border-radius: 50%;
+  z-index: 1;
+  filter: blur(15px);
+  opacity: 0.7;
+  animation: pulse 3s infinite alternate;
+}
+
+.profile-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles du contenu */
+.content-container {
+  flex: 2;
+  min-width: 300px;
+}
+
+.name-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #ff7e00, #ff2802);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 2px 10px rgba(255, 126, 0, 0.1);
+}
+
+/* Conteneur pour le texte qui change */
+.typing-container {
+  height: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.typing-text {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Style pour la profession avec effet de couleur */
+.profession {
+  position: relative;
+  background: linear-gradient(90deg, #e2270a, #e2270a, #ff7e00);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient 3s linear infinite;
+  font-weight: 600;
+}
+
+/* Cursor d'animation */
+.cursor {
+  position: absolute;
+  right: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 80%;
+  background-color: #e2270a;
+  animation: blink 0.8s step-end infinite;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+/* Container pour les boutons */
+.buttons-container {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+/* Style commun pour les boutons */
+.contact-button, .download-button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+/* Style spécifique pour le bouton de contact */
+.contact-button {
+  background: linear-gradient(45deg, #e2270a, #ff4e00);
+  color: white;
+  box-shadow: 0 5px 15px rgba(255, 126, 0, 0.3);
+}
+
+.contact-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 126, 0, 0.5);
+}
+
+/* Style spécifique pour le bouton de téléchargement */
+.download-button {
+  background: transparent;
+  color: #333;
+  border: 2px solid #ff7e00;
+  box-shadow: 0 5px 15px rgba(255, 126, 0, 0.1);
+}
+
+.download-button:hover {
+  background-color: rgba(255, 126, 0, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 126, 0, 0.2);
+}
+
+/* Animations */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes gradient {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.4; transform: scale(0.97); }
+  100% { opacity: 0.7; transform: scale(1); }
+}
+
+/* Design responsive */
+@media (max-width: 768px) {
+  .portfolio-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .content-container {
+    align-items: center;
+  }
+  
+  .image-container {
+    max-width: 250px;
+  }
+  
+  .name-heading {
+    font-size: 2.5rem;
+  }
+  
+  .typing-text {
+    font-size: 1.5rem;
+  }
+  
+  .buttons-container {
+    justify-content: center;
+  }
+}
