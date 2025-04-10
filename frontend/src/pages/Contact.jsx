@@ -1,8 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {  Mail, Phone, Home,faLinkedin, faGithub, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLinkedin,
+  faGithub,
+  faFacebook,
+} from "@fortawesome/free-brands-svg-icons";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -151,7 +155,9 @@ export default function Contact() {
       </div>
 
       <div className="bg-gradient-to-r from-[#ff7e00] to-[#ff9e33] p-6 rounded-md shadow-md h-[70%] w-full m-auto text-white -ml-10">
-        <h2 className="text-xl text-center font-semibold mb-4">mes Informations</h2>
+        <h2 className="text-xl text-center font-semibold mb-4">
+          mes Informations
+        </h2>
         <ul className="space-y-4">
           <li className="flex items-center">
             <span className="material-icons text-white mr-3">Residence</span>
@@ -165,17 +171,26 @@ export default function Contact() {
             <span className="material-icons text-white mr-3">email</span>
             <span>contact@company.com</span>
           </li>
-        <li className="flex justify-evenly items-center ">
-          <Link to="#" className="hover:scale-110 transition-transform duration-300 ">
-            <FontAwesomeIcon icon={faLinkedin} size="2x" />
-          </Link>
-          <Link to="#" className="hover:scale-110 transition-transform duration-300">
-            <FontAwesomeIcon icon={faGithub} size="2x" />
-          </Link>
-          <Link to="#" className="hover:scale-110  transition-transform duration-300">
-          <FontAwesomeIcon icon={faFacebook} size="2x" />
-          </Link>
-        </li>
+          <li className="flex justify-evenly items-center ">
+            <Link
+              to="#"
+              className="hover:scale-110 transition-transform duration-300 "
+            >
+              <FontAwesomeIcon icon={faLinkedin} size="2x" />
+            </Link>
+            <Link
+              to="#"
+              className="hover:scale-110 transition-transform duration-300"
+            >
+              <FontAwesomeIcon icon={faGithub} size="2x" />
+            </Link>
+            <Link
+              to="#"
+              className="hover:scale-110  transition-transform duration-300"
+            >
+              <FontAwesomeIcon icon={faFacebook} size="2x" />
+            </Link>
+          </li>
         </ul>
       </div>
     </div>

@@ -1,7 +1,31 @@
-export default function Projets() {
+import { useEffect, useState } from 'react';
+
+function Projets() {
+    const [projets, setProjets] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:8000/api/projets')
+            .then(response => {
+                return response.json();
+            })
+            .then(data => {
+                console.log('Fetched data:', data);
+                setProjets(data); 
+            })
+    }, []);
+
     return (
-        <h1 className="text-3xl font-bold text-center text-gray-900">
-            page Projets
-        </h1>
+        <div>
+            <h2>Liste des projets</h2>
+            <ul>
+                {projets.map((projet) => (
+                    <li key={projet.id}>{projet.nom}</li>
+                ))}
+
+                {/* <li>{JSON.stringify(projets)}</li> */}
+            </ul>
+        </div>
     );
 }
+
+export default Projets;
