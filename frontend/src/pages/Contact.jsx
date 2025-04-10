@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedin, faGithub, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import {  Mail, Phone, Home,faLinkedin, faGithub, faFacebook } from '@fortawesome/free-brands-svg-icons';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
